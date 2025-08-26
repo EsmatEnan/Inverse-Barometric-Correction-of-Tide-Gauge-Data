@@ -3,16 +3,16 @@ This repository contains an R script that applies inverse barometric (IB) correc
 
 Key steps included in the workflow:
 
-Convert Pressure to Water Column (mwc):
+1. Convert Pressure to Water Column (mwc):
 Atmospheric pressure (Pa) is converted into meters of water column to make it compatible with tide gauge measurements.
 
-Inverse Barometric Correction Factor (IBCF):
+2. Inverse Barometric Correction Factor (IBCF):
 The correction factor is computed using surface pressure and temperature data, adjusting for density changes with temperature.
 
-Interpolation of Missing Data:
+3. Interpolation of Missing Data:
 Cubic spline interpolation is used to match the IB correction series with the tide gauge time series, ensuring consistency in length and resolution.
 
-Corrected Tide Calculation:
+4. Corrected Tide Calculation:
 The harmonic-fitted tide values are corrected by subtracting the interpolated IB correction factor, producing the final atmospherically corrected tide series.
 
 Output:
