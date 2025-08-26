@@ -5,12 +5,16 @@ Key steps included in the workflow:
 
 Convert Pressure to Water Column (mwc):
 Atmospheric pressure (Pa) is converted into meters of water column to make it compatible with tide gauge measurements.
+
 Inverse Barometric Correction Factor (IBCF):
 The correction factor is computed using surface pressure and temperature data, adjusting for density changes with temperature.
+
 Interpolation of Missing Data:
 Cubic spline interpolation is used to match the IB correction series with the tide gauge time series, ensuring consistency in length and resolution.
+
 Corrected Tide Calculation:
 The harmonic-fitted tide values are corrected by subtracting the interpolated IB correction factor, producing the final atmospherically corrected tide series.
+
 Output:
 The script exports a tidy dataset (CSV) containing:
 Time
